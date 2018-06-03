@@ -44,3 +44,11 @@ Reference:
 * https://docs.oracle.com/cd/E19509-01/820-3503/ggezy/index.html
 * https://medium.com/@tbusser/creating-a-browser-trusted-self-signed-ssl-certificate-2709ce43fd15
 
+
+Problem
+---
+
+1. Openssl hangs when trying to run any commands in Git Bash (Windows)  
+   Solution: add **winpty** in front of command  
+   Ex. `winpty openssl genrsa -des3 -out rootCA.key 4096`  
+   Credit: https://stackoverflow.com/questions/18905795/creating-csr-with-openssl-hangs
