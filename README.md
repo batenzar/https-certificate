@@ -7,7 +7,7 @@ Signing Certificates With Your Own CA
 TL;DR
 1. Create the root ca certificate  
    1. Generate private key  
-command: `openssl genrsa -des3 -out rootCA.key 4096`  
+command: `openssl genrsa -des3 -out rootCA.key 2048`  
 output file: **rootCA.key**  
 
    2. Generate root ca cert  
@@ -26,8 +26,8 @@ output file: **server.csr, server.key**
       keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment
       subjectAltName = @alt_names
       [alt_names]
-      DNS.1 = acme-site.dev
-      DNS.2 = acme-static.dev
+      DNS.1 = *.mydomain.com
+      DNS.2 = mydomain.com
       ```  
       output file: **v3.ext**
 
