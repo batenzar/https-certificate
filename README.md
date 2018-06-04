@@ -39,6 +39,8 @@ output file: **server.crt**
 command: `openssl pkcs12 -inkey server.key -in server.crt -export -out server.pfx`  
 output file: **server.pfx** -> the result keystore for using in server config
 
+4. Import server.crt to your Trust Certificate Authority  
+
 
 Reference:  
 * https://docs.oracle.com/cd/E19509-01/820-3503/ggezy/index.html
@@ -47,6 +49,7 @@ Reference:
 Note
 ---
 * DNS cannot be IP address and does not specify port
+* Only Firefox trusts this certificate (Edge or Chrome 58+ will display SSL error "DLG_FLAGS_INVALID_CA" and "NET::ERR_CERT_AUTHORITY_INVALID" respectivly)
 
 Problem
 ---
