@@ -44,6 +44,9 @@ Reference:
 * https://docs.oracle.com/cd/E19509-01/820-3503/ggezy/index.html
 * https://medium.com/@tbusser/creating-a-browser-trusted-self-signed-ssl-certificate-2709ce43fd15
 
+Note
+---
+* DNS cannot be IP address and does not specify port
 
 Problem
 ---
