@@ -58,3 +58,28 @@ Problem
    Solution: add **winpty** in front of command  
    Ex. `winpty openssl genrsa -des3 -out rootCA.key 4096`  
    Credit: https://stackoverflow.com/questions/18905795/creating-csr-with-openssl-hangs
+   
+
+Attribute Explaination (TODO)
+---
+
+Common Cert Attribute
+* Version 3
+* Subject Key Identifier
+
+1. CA certificate  
+   * Basic Constraints: Subject is a CA 
+   * Key usage: `<?>`
+
+2. Certificate for Server Authentication
+   * Authority Key Identifier: `<subject key identifier of the issuer>`
+   * Basic Constraints: `Subject is not a CA`
+   * Key usage: `<?>`
+   * Subject Alternative Name (SAN): 
+      * DNS Name: `<yourdomainname>` 
+
+Reference:  
+* https://knowledge.digicert.com/solution/SO18140.html
+
+
+
