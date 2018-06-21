@@ -4,7 +4,6 @@
 
 Signing Certificates With Your Own CA
 ======
-TL;DR
 1. Create the root ca certificate  
    1. Generate private key  
 command: `openssl genrsa -des3 -out rootCA.key 2048`  
@@ -48,7 +47,8 @@ Reference:
 
 Note
 ---
-* DNS cannot be IP address and does not specify port
+* You can use openssl from git bash, if you are windows user
+* DNS is the domain name without specifying port (cannot be IP address)
 * Only Firefox trusts this certificate (Edge or Chrome 58+ will display SSL error "DLG_FLAGS_INVALID_CA" and "NET::ERR_CERT_AUTHORITY_INVALID" respectivly)
 
 Problem
